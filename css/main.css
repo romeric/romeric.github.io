@@ -48,5 +48,10 @@ ul.posts li {
     border-radius: 80%;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 
