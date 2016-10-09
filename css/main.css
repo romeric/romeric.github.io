@@ -47,3 +47,11 @@ ul.posts li {
     height: 400px;
     border-radius: 80%;
 }
+
+.box{
+    float:left;
+    width:48%;
+    height:200px;
+    margin:0 auto;
+}
+
