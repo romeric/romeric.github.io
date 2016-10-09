@@ -92,7 +92,7 @@ ul.posts li {
     width: 55px;
     height: 55px;
     cursor: pointer;
-    background: url('img/a02.png') no-repeat;
+    background: url('images/a02.png') no-repeat;
     overflow: hidden;
 }
 .jssora02l { background-position: -3px -33px; }
