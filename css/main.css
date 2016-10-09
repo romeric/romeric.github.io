@@ -48,16 +48,5 @@ ul.posts li {
     border-radius: 80%;
 }
 
-.verticalLine {
-    border-left: thick solid #ffeecc;
-}
-
-.box{
-    float:left;
-    width:48%;
-    height:200px;
-    margin:0 auto;
-}
-
 
 
