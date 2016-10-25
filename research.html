@@ -37,12 +37,6 @@
                 <div lang="latex">\Pi_u(\boldsymbol{x},\boldsymbol{D}) = \int_\Omega \bigg( D\Psi(\boldsymbol{F},\boldsymbol{H},J,\boldsymbol{D})[\delta\boldsymbol{u}] + \frac{1}{2}D^2\Psi(\boldsymbol{F},\boldsymbol{H},J,\boldsymbol{D})[\delta\boldsymbol{u};\Delta\boldsymbol{u}] \bigg).</div>
                 <!---->
                 <p>$\Pi_u$ is a new energy functional which is geometrically linearised but electrostatically still nonlinear. Further linearisation of this energy leads a variationally consistent electromechanical formulation. The variational form is then discretised using suitable finite element spaces. In this context high order finite elements which can capture the exact geometry and result in higher accuracy are applied. For mathematical and implemenation details the reader can refer to the papers by Gil and Ortigosa and Poya <em>et. al.</em></p>
-                <ul>
-                    <li>A. J. Gil and R. Ortigosa, A new framework for large strain electromechanics based on convex multi-variable strain energies: Variational formulation and material characterisation, <em>Computer Methods in Applied Mechanics and Engineering</em>, <a href="http://www.sciencedirect.com/science/article/pii/S0045782515004168">Volume 302, 15 April 2016, Pages 293–328</a></li>
-                    <li>R. Ortigosa and A. J. Gil, A new framework for large strain electromechanics based on convex multi-variable strain energies: Finite Element discretisation and computational implementation, <em>Computer Methods in Applied Mechanics and Engineering</em>, <a href="http://www.sciencedirect.com/science/article/pii/S0045782515004168">Volume 302, 15 April 2016, Pages 329–360</a></li>
-                    <li>R. Ortigosa and A. J. Gil, A new framework for large strain electromechanics based on convex multi-variable strain energies: Conservation laws, hyperbolicity and extension to electro-magneto-mechanics, <em>Computer Methods in Applied Mechanics and Engineering</em>, <a href="http://www.sciencedirect.com/science/article/pii/S0045782515004168">Volume 309, 1 September 2016, Pages 202–242</a></li>
-                    <li>R. Poya and A. J. Gil and P. D. Ledger, A computational framework for the analysis of linear piezoelectric beams using <em>hp</em>-finite elements, <em>Computers and Structures</em>, <a href="http://www.sciencedirect.com/science/article/pii/S0045794915000218">Volume 152, May 2015, Pages 155–172</a></li>
-                </ul>
                 <img src="/images/coupled_problems/hand.png" alt="hand" style="max-width:48%;">
                 <img src="/images/coupled_problems/hand_mesh.png" alt="handmesh" style="max-width:48%;">
                 <p>The following plots show <em>h</em>-convergence of $L^2$ and $H^1$ norms (for different interpolation degree $p$) for electric potential, electric field and rotations in an structurally reduced (beam) model for an electromechanical actuator, respectively.</p>
@@ -54,10 +48,16 @@
                     <figcaption align="center">Electromechanical expansion/contraction of a prismatic column (elevation view)</figcaption>
                 </figure>
                 <p>This work is mainly focused towards numerical simulations of sensors, energy harversters and soft tissues such as artifical muscles (shown above). Further details about this project can be found in the <em>soon-to-be-open-source</em> <b>florence</b> project.</a></p>
+                <ul>
+                    <li>A. J. Gil and R. Ortigosa, A new framework for large strain electromechanics based on convex multi-variable strain energies: Variational formulation and material characterisation, <em>Computer Methods in Applied Mechanics and Engineering</em>, <a href="http://www.sciencedirect.com/science/article/pii/S0045782515004168">Volume 302, 15 April 2016, Pages 293–328</a></li>
+                    <li>R. Ortigosa and A. J. Gil, A new framework for large strain electromechanics based on convex multi-variable strain energies: Finite Element discretisation and computational implementation, <em>Computer Methods in Applied Mechanics and Engineering</em>, <a href="http://www.sciencedirect.com/science/article/pii/S0045782515004168">Volume 302, 15 April 2016, Pages 329–360</a></li>
+                    <li>R. Ortigosa and A. J. Gil, A new framework for large strain electromechanics based on convex multi-variable strain energies: Conservation laws, hyperbolicity and extension to electro-magneto-mechanics, <em>Computer Methods in Applied Mechanics and Engineering</em>, <a href="http://www.sciencedirect.com/science/article/pii/S0045782515004168">Volume 309, 1 September 2016, Pages 202–242</a></li>
+                    <li>R. Poya and A. J. Gil and P. D. Ledger, A computational framework for the analysis of linear piezoelectric beams using <em>hp</em>-finite elements, <em>Computers and Structures</em>, <a href="http://www.sciencedirect.com/science/article/pii/S0045794915000218">Volume 152, May 2015, Pages 155–172</a></li>
+                </ul>
                 <!---->
                 <hr>
                 <h2>High Order Curvilinear Mesh Generation:</h2>
-                <p>A core part of my research work focuses on implementing novel algorithms for generating structured and unstructured meshes for high order finite element analysis. In particular, I work on various solid mechanics based analogies for a posteriori mesh generation.</p>
+                <p>A core part of my research work focuses on implementing novel algorithms for generating structured and unstructured meshes for NURBS conforming high order finite element analysis. In particular, I work on various solid mechanics based analogies for a posteriori mesh generation.</p>
                 <!--img src="/images/mesh_generation/F6Iso_2.png" alt="F6IsotropicMesh" style="width:1200px;height:450px;">
                 <img src="/images/mesh_generation/f6BL_2.png" alt="F6AnisotropicMesh" style="width:680px;height:400px;">
                 <img src="/images/mesh_generation/Mech3D_1.png" alt="MechanicalComponent3D" style="width:490px;height:400px;"-->
