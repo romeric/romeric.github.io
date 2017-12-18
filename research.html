@@ -105,7 +105,7 @@
                     <img src="/images/coupled_problems/tmp/Disc20_800.png" style="max-width:15%;">
                     <figcaption align="center">Wrinkling in soft dielectric film</figcaption>
                 </figure>
-                <p>Further details about this project can be found in the <em>soon-to-be-open-source</em> <b>florence</b> project.</a></p>
+                <p>Further details about this project can be found in the open-source <b>florence</b> project.</a></p>
                 <ul>
                     <li>Roman Poya, Rogelio Ortigosa, Antonio J. Gil, Ruben Sevilla, Javier Bonet, Wolfgang A. Wall, A curvilinear high order finite element framework for electromechanics: from linearised electro-elasticity to massively deformable dielectric elastomers, <em>Computer Methods in Applied Mechanics and Engineering</em>, <a href="http://www.sciencedirect.com/science/article/pii/S0045782517306503">Volume 329, 1 Feb 2018, Pages 75–117</a></li>
                     <li>A. J. Gil and R. Ortigosa, A new framework for large strain electromechanics based on convex multi-variable strain energies: Variational formulation and material characterisation, <em>Computer Methods in Applied Mechanics and Engineering</em>, <a href="http://www.sciencedirect.com/science/article/pii/S0045782515004168">Volume 302, 15 April 2016, Pages 293–328</a></li>
@@ -133,7 +133,7 @@
                 <!---->
                 <hr>
                 <h2>High Performance Data Parallel Algorithms for Solving Multi-Physics Problems:</h2>
-                <p>Recently, I have started implementing a data parallel tensor contraction framework based on C++11 (and beyond) with some fundamentally novel metaproramming features. In particular, the framework combines powerful SIMD implementations of BLAS type routines for high order tensors with a domain-aware expression template engine which performs operation minimisation at compile time. The following figures present the run-time performance of operation minimisation for three-tensor-network over the classical single tensor expression evaluation for different CPU caches.</p>
+                <p>The backbone of the aforementioned projects is based on Fastor, a data parallel tensor contraction framework based on C++11 (and beyond) with some fundamentally novel metaproramming features. In particular, Fastor combines powerful SIMD implementations of BLAS type routines for high order tensors with a domain-aware expression template engine which performs operation minimisation at compile time. This facilitates extremely fast evaluation of finite element matrices and local assembly procedures. The following figures present the run-time performance of operation minimisation for three-tensor-network over the classical single tensor expression evaluation for different CPU caches.</p>
                 <figure>
                     <img src="/images/hpc/05l1.png" style="max-width:24%;">
                     <img src="/images/hpc/05l2.png" style="max-width:24%;">
@@ -145,6 +145,13 @@
                 <ul>
                   <li>Roman Poya, Antonio J. Gil, Rogelio Ortigosa, A high performance data parallel tensor contraction framework: Application to coupled electro-mechanics, <i>Computer Physics Communications</i>, [<a href="http://www.sciencedirect.com/science/article/pii/S0010465517300681">10.1016/j.cpc.2017.02.016</a>], (2017)</li>
                 </ul>
+                <h2>Fast Explicit Dynamics Solver for Contact and Multiphysics Problem:</h2>
+                <p>The most recent version of florence <a href="https://github.com/romeric/florence">Florence</a> has the capability to perform explicit dynamic analysis for mechanical and coupled electromechanical problems with explicit node-to-surface penalty contact algorithm. The following figures show the distribution of hydrostatic pressure during crash analysis.</p>
+                <figure>
+                    <img src="/images/explicit_dynamics/SimulationCarCrash1.gif" style="max-width:45%;">
+                    <img src="/images/explicit_dynamics/SimulationCarCrash2.gif" style="max-width:45%;">
+                    <figcaption align="center">Car crash analysis of an Audi TT using explicit dynamics with </figcaption>
+                </figure>
             </div><!-- /.blurb -->
         </div><!-- /.container -->
         <footer>
