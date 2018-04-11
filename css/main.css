@@ -63,12 +63,12 @@ img {
 
 .column0 {
     float: left;
-    width: 22%;
+    width: 25%;
 }
 
 .column1 {
     float: left;
-    width: 37%;
+    width: 40%;
 }
 
 /* Clear floats after the columns */
