@@ -59,16 +59,19 @@ img {
 .column {
     float: left;
     width: 33.33%;
+    margin: 10px;
 }
 
 .column0 {
     float: left;
     width: 30%;
+    margin: 50px;
 }
 
 .column1 {
     float: left;
     width: 40%;
+    margin: 50px;
 }
 
 /* Clear floats after the columns */
