@@ -64,13 +64,13 @@ img {
 .column0 {
     float: left;
     width: 30%;
-    padding: 20px;
+    padding: 0 30px 0 0;
 }
 
 .column1 {
     float: left;
-    width: 40%;
-    padding: 20px;
+    width: 30%;
+    padding: 0 0 0 30px;
 }
 
 /* Clear floats after the columns */
