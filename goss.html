@@ -103,7 +103,7 @@
             <img src="assets/images/ssvd.svg" style="max-width:9%;">
           </figure>
           <div>
-            where <img src="assets/images/Sigma.svg" style="max-width:1.3%;"> is the diagonal matrix of singular-values <img src="assets/images/sigmas.svg" style="max-width:12%;">. Restricting ourselves to 2-dimensions (for the sake of this presentation) we express desired distortion energy either in terms of stretch tensor invariants or signular values as follows
+            where <img src="assets/images/Sigma.svg" style="max-width:1.3%;"> is the diagonal matrix of singular-values <img src="assets/images/sigmas.svg" style="max-width:12%;">. Restricting ourselves to 2-dimensions (for the sake of this presentation) we express the desired distortion energy either in terms of stretch tensor invariants or signular values as follows
           </div>
           <br>
           <figure align="center">
@@ -124,19 +124,19 @@
             <img src="assets/images/SD_eigenvalues.svg" style="max-width:20%;">
           </figure>
           <div>
-            In the discrete setting, given that no triangles are flipped, it is evident that, the above Hessian always has three positive eigenvalues. The last eigenvalue can be negative and hence, the SD energy can become indefinite.
+            It is evident that, given that no triangles are flipped in the discrete setting (i.e. all singular-values are positive), the above Hessian always has three positive eigenvalues. The last eigenvalue can be negative and hence, the SD energy can turn indefinite during the course of deformation.
           </div>
           <br>
           <h5>Proposed Idea</h5>
           <div>
-            While many strategies exist for convexifying an energy, the intuitive idea we propose is to <b>spectrally shift the singular values</b> of deformation gradient tensor as follows
+            While many strategies exist for convexifying an energy, the idea we propose is, intuitively, to <b>spectrally shift the singular values</b> of the deformation gradient tensor as follows
           </div>
           <br>
           <figure align="center">
             <img src="assets/images/spectral_shift_f.svg" style="max-width:25%;">
           </figure>
           <div>
-            where <img src="assets/images/Sigma_s.svg" style="max-width:7%;"> is a scaled identity matrix acting as a regulariser and <img src="assets/images/beta.svg" style="max-width:1.1%;"> is the regularisation parameter. Essentially, every singular-value <img src="assets/images/sigma_i.svg" style="max-width:1.5%;"> is shifted by an amount <img src="assets/images/beta.svg" style="max-width:1.1%;"> to <img src="assets/images/sigma_ib.svg" style="max-width:5.1%;">, isotropically. Instead of working with <img src="assets/images/F.svg" style="max-width:1.5%;"> we can simply choose to work with <img src="assets/images/F_r.svg" style="max-width:1.9%;"> by plugging it into any desired distortion energy and in return obtaining a regularised distortion energy. For instance, the Regularised Symmetric Dirichlet (RSD) energy then looks like this
+            where <img src="assets/images/Sigma_s.svg" style="max-width:7%;"> is a scaled identity matrix acting as a regulariser and <img src="assets/images/beta.svg" style="max-width:1.1%;"> is the regularisation parameter. More specifically, every singular-value <img src="assets/images/sigma_i.svg" style="max-width:1.5%;"> is shifted by an amount <img src="assets/images/beta.svg" style="max-width:1.1%;"> to <img src="assets/images/sigma_ib.svg" style="max-width:5.1%;">, isotropically. Instead of working with <img src="assets/images/F.svg" style="max-width:1.5%;"> we can simply choose to work with <img src="assets/images/F_r.svg" style="max-width:1.9%;"> by plugging it into any desired distortion energy and in return obtaining a regularised distortion energy. For instance, the Regularised Symmetric Dirichlet (RSD) energy then looks like this
           </div>
           <br>
           <figure align="center">
@@ -150,17 +150,17 @@
             <img src="assets/images/RSD_eigenvalues.svg" style="max-width:38%;">
           </figure>
           <div>
-            An interesting property of this way of regularisation is that, the regularised energy has a similar eigenstructure as the original one with the addition of the stabiliser (in the last eigenvalue). This is due to the fact that, spectral shifting is a linear transform and preserve the convex (non-convex) nature of the energy and only shifts the bounds of convexity. In fact, we can show that for a large positive constant value of <img src="assets/images/beta.svg" style="max-width:1.1%;"> the energy can be totally "convexified".
+            An interesting property of this regularisation is that, the regularised energy has a similar eigenstructure to that of the original one with the addition of the stabiliser (in the last eigenvalue - accidentally the troublesome eigenvalue). This is due to the fact that, spectral shifting is a linear transform and preserves the convex (non-convex) nature of the energy and only shifts the bounds of convexity. In fact, we can show that for a large positive constant value of <img src="assets/images/beta.svg" style="max-width:1.1%;"> the RSD energy is a "<i>convexified</i>" version of SD.
           </div>
           <br>
           <div>
-            Why do this instead of clamping the eigenvalues of original SD energy to zero (in fact, we even have them in closed-form)? Well, clamping the eigenvalues of original SD deteriorates the convergence of a second order solver such as the quadratic convergence of Newton while spectral shifting results in a new (potentially convex) energy that preserves the convergence characteristic.
+            The question then is: why do this instead of clamping the eigenvalues of original SD energy to zero (in fact, we even have them in closed-form)? Well, clamping the eigenvalues of original SD deteriorates the convergence of a second order solver such as the quadratic convergence of Newton while spectral shifting results in a new (potentially convex) energy that retains the theoretically guaranteed convergence of nonlinear solvers.
           </div>
 
           <br>
           <h5>Recovering Injectivity</h5>
           <div>
-            While this regularisation technique <i>can</i> make energies convex and easy to optimise using convex minimisation approaches, intuitively, it drops their flip-preventing (locally-injective-preserving) nature as evident in the energy and Hessian eigenvalues of RSD. However, it opens another avenue and that is to recover flip-free configuration using flip-preventing energies. This is a natural extension of spectral shifting and novel to our contribution. The idea is, if we have a target mesh with flipped elements, we would start with a large enough <img src="assets/images/beta.svg" style="max-width:1.1%;"> such that it turns the lowest signular-value of the deformation gradient over all the elements to non-negative and then we progressively decrease <img src="assets/images/beta.svg" style="max-width:1.1%;"> by running Newton minimisation multiple times each time with a new <img src="assets/images/beta.svg" style="max-width:1.1%;">. In the beginning we the optimisation may also enjoy the benifit of quadratic convergence of Newton but as <img src="assets/images/beta.svg" style="max-width:1.1%;"> is decreased sufficiently we resort to clamping the eigenvalues. There are many formulae that we tested for the decay of <img src="assets/images/beta.svg" style="max-width:1.1%;"> over the course of optimisation including considering <img src="assets/images/beta.svg" style="max-width:1.1%;"> to vary from element to element (that is considering it as a variable and carrying out energy derivatives, respectively). Our extensive evaluation revealed that this technique results in a fast and extremely robust "best-effort" framework for recovering flip-free configurations successfully passing large-scale local injectivity benchmarks and outperforming state-of-the-art techniques by orders of magnitude.
+            While this regularisation technique <i>can</i> make energies convex and easy to optimise using convex minimisation approaches, intuitively, it drops their flip-preventing (locally-injective-preserving) nature as evident in the energy and Hessian eigenvalues of RSD. However, it opens another avenue and that is recovering flip-free configuration using flip-preventing energies. This is a natural extension of spectral shifting and novel to our contribution. The idea is, if we have a target mesh with flipped elements, we would start with a large enough <img src="assets/images/beta.svg" style="max-width:1.1%;"> such that it turns the lowest signular-value of the deformation gradient over all the elements to non-negative and then we progressively decrease <img src="assets/images/beta.svg" style="max-width:1.1%;"> by running Newton minimisation multiple times each time with a new <img src="assets/images/beta.svg" style="max-width:1.1%;">. In the beginning of the optimisation we also often enjoy the benefit of quadratic convergence of Newton but as <img src="assets/images/beta.svg" style="max-width:1.1%;"> is decreased sufficiently we resort to clamping the eigenvalues. There are many formulae that we tested for the decay of <img src="assets/images/beta.svg" style="max-width:1.1%;"> over the course of optimisation including considering <img src="assets/images/beta.svg" style="max-width:1.1%;"> to vary from element to element (i.e. considering it as a variable and carrying out energy derivatives, respectively). Our extensive evaluation has revealed that despite being a "best-effort" approach, this technique results in a fast and extremely robust framework for recovering flip-free configurations, successfully passing large-scale local injectivity benchmarks and outperforming state-of-the-art techniques by orders of magnitude.
           </div>
           <br>
           <figure align="center">
