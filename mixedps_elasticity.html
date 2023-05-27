@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Variational schemes and mixed finite elements for large strain isotropic elasticity in principal stretches: Closed-form tangent eigensystems, convexity conditions, and stabilised elasticity</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <script type="text/javascript">LatexIT.add('p',true);</script>
+
+    <!-- gooogle scholar coming from academicons -->
+    <link rel="stylesheet" href="assets/academicons-1.9.3/css/academicons.min.css"/>
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="index.html"><img src="assets/images/profile.jpg" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Roman Poya</h4>
+              <!-- <span>R&D Engineer</span> -->
+            </div>
+
+            <div class="social-network">
+              <ul class="soial-icons">
+                <li>
+                  <a href="https://twitter.com/RomanScripts"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="https://uk.linkedin.com/in/roman-poya-2364a01a"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="https://scholar.google.co.uk/citations?user=W8QHt7oAAAAJ&hl=en"><i class="ai ai-google-scholar"></i></a>
+                </li>
+                <li>
+                  <a href="https://github.com/romeric"><i class="fa fa-github"></i></a>
+                </li>
+                <li>
+                  <a href="https://soundcloud.com/romeric-poyazh"><i class="fa fa-soundcloud"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright-text">
+              <p>Copyright 2018 Roman Poya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Variational schemes and mixed finite elements for large strain isotropic elasticity in principal stretches: Closed-form tangent eigensystems, convexity conditions, and stabilised elasticity</h2>
+            <h6>Roman Poya, Rogelio Ortigosa, Antonio Gil</h6>
+            <h6>International Journal for Numerical Methods in Engineering, Vol 124, In-Press, 2023</h6>
+            <div class="line-dec"></div>
+            <figure align="center">
+                <img src="assets/images/Twist3.png" style="max-width:90%;">
+            </figure>
+          </div>
+          <div class="white-button" align="center">
+            <a href="assets/docs/2022_MixedFEMElasticityInPrincipalStretches.pdf" target="_blank">PDF</a>
+            <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.7254" target="_blank">DOI</a>
+          </div>
+          <h5>Abstract</h5>
+          <div>
+            A new computational framework for large strain elasticity in principal stretches is presented. Distinct from existing literature, the proposed formulation makes direct use of principal stretches rather than their squares that is, eigenvalues of Cauchy-Green strain tensor. The proposed framework has three key features. First, the eigen-decomposition of the tangent elasticity and initial (geometric) stiffness operators is obtained in closed-form from principal information alone. Crucially, these newly found eigenvalues describe the general convexity conditions of isotropic hyperelastic energies. In other words, convexity is postulated concisely through tangent eigenvalues supplementing the original work of Ball (<i>Arch Ration Mech Anal. 1976; 63(4): 337–403</i>). Consequently, this novel finding opens the door for designing efficient automated Newton-style algorithms with stabilised tangents via <i>closed-form</i> semipositive definite projection or spectral shifting that converge irrespective of mesh resolution, quality, loading scenario and without relying on path-following techniques. A critical study of closed-form tangent stabilisation in the context of isotropic hyperelasticity is therefore undertaken in this work. Second, in addition to high order displacement-based formulation, mixed Hu-Washizu variational principles are formulated in terms of principal stretches by introducing stretch work conjugate Lagrange multipliers that enforce principal stretch-stress compatibility. This is similar to enhanced strain methods. However, the resulting mixed finite element scheme is cost-efficient, specially compared to approximating the entire strain tensors since the formulation is in the scalar space of singular values. Third, the proposed framework facilitates simulating rigid and stiff systems and those that are nearly-inextensible in principal directions, a constituent of elasticity that cannot be easily studied using standard formulations.
+          </div>
+          <br>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+  </body>
+</html>
