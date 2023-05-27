@@ -728,6 +728,22 @@ section.contact-me {
 
 }
 
+.iframe-container {
+    margin-left: auto; /* For center alignment */
+    margin-right: auto; /* For center alignment */
+    position: relative;
+    width: 80%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.iframe-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .menu .container {
     padding-left: 0;
     padding-right: 0;
