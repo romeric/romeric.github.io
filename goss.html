@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Geometric Optimisation Via Spectral Shifting</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <script type="text/javascript">LatexIT.add('p',true);</script>
+
+    <!-- gooogle scholar coming from academicons -->
+    <link rel="stylesheet" href="assets/academicons-1.9.3/css/academicons.min.css"/>
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="index.html"><img src="assets/images/profile.jpg" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Roman Poya</h4>
+              <!-- <span>R&D Engineer</span> -->
+            </div>
+
+            <div class="social-network">
+              <ul class="soial-icons">
+                <li>
+                  <a href="https://twitter.com/RomanScripts"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="https://uk.linkedin.com/in/roman-poya-2364a01a"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="https://scholar.google.co.uk/citations?user=W8QHt7oAAAAJ&hl=en"><i class="ai ai-google-scholar"></i></a>
+                </li>
+                <li>
+                  <a href="https://github.com/romeric"><i class="fa fa-github"></i></a>
+                </li>
+                <li>
+                  <a href="https://soundcloud.com/romeric-poyazh"><i class="fa fa-soundcloud"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright-text">
+              <p>Copyright 2018 Roman Poya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Geometric Optimisation Via Spectral Shifting</h2>
+            <h6>Roman Poya, Rogelio Ortigosa, Theodore Kim</h6>
+            <h6>ACM Transactions on Graphics, Vol 42, No 3, Article No 29, pp 1-15 (SIGGRAPH 2023)</h6>
+            <div class="line-dec"></div>
+            <figure align="center">
+                <img src="assets/images/repImageGOSS_t2.png" style="max-width:90%;">
+            </figure>
+          </div>
+          <div class="white-button" align="center">
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3585003">PDF</a>
+            <a href="assets/docs/SupplementalDocument_GOSS.pdf">Supplement</a>
+            <a href="assets/docs/supplement_goss.zip">CODE & VIDEOS</a>
+            <a href="https://dl.acm.org/doi/10.1145/3585003">DOI</a>
+          </div>
+          <h5>Abstract</h5>
+          <div>
+            We present a geometric optimisation framework that can recover fold-over free maps from non-injective initial states using popular flip-preventing distortion energies. Since flip-preventing energies are infinite for folded configurations, we propose a new regularisation scheme that shifts the singular values of the deformation gradient. This allow us to re-use many existing algorithms, especially locally injective methods for initially folded maps. Our regularisation is suitable for both singular value- and invariant-based formulations, and systematically contributes multiple stabilisers to the Hessian. In contrast to proxy-based techniques, we maintain second-order convergence. Compact expressions for the energy eigensystems can be obtained for our extended stretch invariants, enabling the use of fast projected Newton solvers. Although spectral shifting in general has no theoretical guarantees that the global minimum is an injection, extensive experiments show that our framework is fast and extremely robust in practice, and capable of generating high-quality maps from severely distorted, degenerate and folded initialisations.
+          </div>
+          <br></br>
+          <h5>Synopsis</h5>
+          <div>
+            Distortion energies are typically expressed in terms of a set of invariants such as Cauchy-Green [<a href="https://doi.org/10.1017/CBO9781316336144">Bonet & Wood 2016a</a>], polyconvex [<a href="https://doi.org/10.1016/j.cma.2014.10.002">Bonet 2016b</a>], stretch tensor invariants [<a href="https://doi.org/10.1145/3241041">B. Smith 2019</a>] or singular values [<a href="https://dl.acm.org/doi/abs/10.1145/2766917">Xu et. al. 2015</a>] of the deformation gradient tensor <img src="assets/images/F.svg" style="max-width:1.3%;">. The deformation gradient (more commonly known as the Jacobian of mapping although in our case we reserve the word Jacobian for the determinant of <img src="assets/images/F.svg" style="max-width:1.3%;">) admits the following Signed Singular Value Decomposition (SSVD) [<a href="https://doi.org/10.1145/1028523.1028541">Irving 2004</a>]
+          </div>
+          <br>
+          <figure align="center">
+            <img src="assets/images/ssvd.svg" style="max-width:9%;">
+          </figure>
+          <div>
+            where <img src="assets/images/Sigma.svg" style="max-width:1.3%;"> is the diagonal matrix of singular-values <img src="assets/images/sigmas.svg" style="max-width:12%;">. Restricting ourselves to 2-dimensions (for the sake of this presentation) we express desired distortion energy either in terms of stretch tensor invariants or signular values as follows
+          </div>
+          <br>
+          <figure align="center">
+            <img src="assets/images/distortion_energy_2d2.svg" style="max-width:21%;">
+          </figure>
+          <div>
+            where <img src="assets/images/I_F.svg" style="max-width:10%;">, <img src="assets/images/II_F.svg" style="max-width:11%;"> and, <img src="assets/images/J_s2d.svg" style="max-width:7%;"> are the stretch tensor invariants [<a href="https://doi.org/10.1145/3241041">B. Smith 2019</a>] which help abstract the math. Consider the Symmetric Dirichlet (SD) energy [<a href="https://doi.org/10.1145/2766947">Smith & Schaefer 2015</a>] in 2-dimensions now which can be expressed in either of these formats as
+          </div>
+          <br>
+          <figure align="center">
+            <img src="assets/images/D_SD.svg" style="max-width:45%;">
+          </figure>
+          <div>
+            Following [<a href="https://doi.org/10.1145/3241041">B. Smith 2019</a>] and [<a href=" https://doi.org/10.1002/nme.7254">Poya 2023</a>], the four Hessian eigenvalues for this energy can be found <b>analytically</b> and written concisely as
+          </div>
+          <br>
+          <figure align="center">
+            <img src="assets/images/SD_eigenvalues.svg" style="max-width:20%;">
+          </figure>
+          <div>
+            In the discrete setting, given that no triangles are flipped, it is evident that, the above Hessian always has three positive eigenvalues. The last eigenvalue can be negative and hence, the SD energy can become indefinite.
+          </div>
+          <br>
+          <h5>Proposed Idea</h5>
+          <div>
+            While many strategies exist for convexifying an energy, the intuitive idea we propose is to <b>spectrally shift the singular values</b> of deformation gradient tensor as follows
+          </div>
+          <br>
+          <figure align="center">
+            <img src="assets/images/spectral_shift_f.svg" style="max-width:25%;">
+          </figure>
+          <div>
+            where <img src="assets/images/Sigma_s.svg" style="max-width:7%;"> is a scaled identity matrix acting as a regulariser and <img src="assets/images/beta.svg" style="max-width:1.1%;"> is the regularisation parameter. Essentially, every singular-value <img src="assets/images/sigma_i.svg" style="max-width:1.5%;"> is shifted by an amount <img src="assets/images/beta.svg" style="max-width:1.1%;"> to <img src="assets/images/sigma_ib.svg" style="max-width:5.1%;">, isotropically. Instead of working with <img src="assets/images/F.svg" style="max-width:1.5%;"> we can simply choose to work with <img src="assets/images/F_r.svg" style="max-width:1.9%;"> by plugging it into any desired distortion energy and in return obtaining a regularised distortion energy. For instance, the Regularised Symmetric Dirichlet (RSD) energy then looks like this
+          </div>
+          <br>
+          <figure align="center">
+            <img src="assets/images/D_RSD.svg" style="max-width:70%;">
+          </figure>
+          <div>
+            The four eigenvalues of RSD are then obtained in a similar fashion
+          </div>
+          <br>
+          <figure align="center">
+            <img src="assets/images/RSD_eigenvalues.svg" style="max-width:38%;">
+          </figure>
+          <div>
+            An interesting property of this way of regularisation is that, the regularised energy has a similar eigenstructure as the original one with the addition of the stabiliser (in the last eigenvalue). This is due to the fact that, spectral shifting is a linear transform and preserve the convex (non-convex) nature of the energy and only shifts the bounds of convexity. In fact, we can show that for a large positive constant value of <img src="assets/images/beta.svg" style="max-width:1.1%;"> the energy can be totally "convexified".
+          </div>
+          <br>
+          <div>
+            Why do this instead of clamping the eigenvalues of original SD energy to zero (in fact, we even have them in closed-form)? Well, clamping the eigenvalues of original SD deteriorates the convergence of a second order solver such as the quadratic convergence of Newton while spectral shifting results in a new (potentially convex) energy that preserves the convergence characteristic.
+          </div>
+
+          <br>
+          <h5>Recovering Injectivity</h5>
+          <div>
+            While this regularisation technique <i>can</i> make energies convex and easy to optimise using convex minimisation approaches, intuitively, it drops their flip-preventing (locally-injective-preserving) nature as evident in the energy and Hessian eigenvalues of RSD. However, it opens another avenue and that is to recover flip-free configuration using flip-preventing energies. This is a natural extension of spectral shifting and novel to our contribution. The idea is, if we have a target mesh with flipped elements, we would start with a large enough <img src="assets/images/beta.svg" style="max-width:1.1%;"> such that it turns the lowest signular-value of the deformation gradient over all the elements to non-negative and then we progressively decrease <img src="assets/images/beta.svg" style="max-width:1.1%;"> by running Newton minimisation multiple times each time with a new <img src="assets/images/beta.svg" style="max-width:1.1%;">. In the beginning we the optimisation may also enjoy the benifit of quadratic convergence of Newton but as <img src="assets/images/beta.svg" style="max-width:1.1%;"> is decreased sufficiently we resort to clamping the eigenvalues. There are many formulae that we tested for the decay of <img src="assets/images/beta.svg" style="max-width:1.1%;"> over the course optimisation including considering <img src="assets/images/beta.svg" style="max-width:1.1%;"> to vary from element to element. Our extensive evaluation revealed that this technique results in a fast and extremely robust "best-effort" framework for recovering flip-free configurations successfully passing large scale local injectivity benchmarks and outperforming state-of-the-art techniques by orders of magnitude.
+          </div>
+          <br>
+          <figure align="center">
+            <img src="assets/images/benchmark2d_times_compare1.png" style="max-width:45%;">
+            <img src="assets/images/benchmark3d_times_compare1.png" style="max-width:45%;">
+              <figcaption>Comparing our Regularised AMIPS energy (RAMIPS) against FFM, Modified-FFM, and ABCD over 2D and 3D benchmarks of [<a href=":https://doi.org/doi.org/10.5281/zenodo.3827969">Du et al. 2020b</a>]. The mean timing over 2D benchmarks were: RAMIPS 2.34s, Modified-FFM: 4.53s (1.93× slower), FFM: 30.19s (12.90× slower) and ABCD: 11.49s (4.92× slower). The mean timing over 3D benchmarks were: RAMIPS 2.84s, Modified-FFM: 4.05s (1.43× slower), FFM: 5.94s (2.09× slower), and ABCD: 112.96s (39.77× slower).
+              </figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+  </body>
+</html>

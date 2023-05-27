@@ -1,56 +1,687 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Roman Poya</title>
-        <!-- link to main stylesheet -->
-        <link rel="stylesheet" type="text/css" href="/css/main.css">
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-        <!-- Place this tag in your head or just before your close body tag. -->
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <!-- Place this tag in your head or just before your close body tag. -->
-        <script async defer src="https://buttons.github.io/buttons.js"></script>
-        <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <!-- <li><a href="/about">About</a></li> -->
-                <li><a href="/research">Research</a></li>
-                <li><a href="/publications">Publications</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-        </nav>
-        <div class="container">
-            <div class="blurb">
-                <h1>Hello, I'm Roman!</h1>
-                <p>I am a researcher in the area of scientific computing. I am interested in developing numerical modelling tools for scientific and engineering problems such as high performance finite element solvers and structured and unstructured mesh generators. You can find more about my research <a href="research.html"> here</a>.
-                </p>
-                <p>I spend countless hours listening to tropical house music. I enjoy photography, playing piano, cycling and exploring nature.
-                </p>
-            </div><!-- /.blurb -->
-        </div><!-- /.container -->
-        <div class="row">
-            <!-- <img class="img-circle" src="/images/profile.png" align="left"> -->
-            <div class="column0">
-                <img class="img-circle" src="/images/profile.jpg" align="left" style="max-width:256px; max-height:256px;">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Roman Poya</title>
+<!--Reflux Template: https://templatemo.com/tm-531-reflux -->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+
+    <!-- gooogle scholar coming from academicons -->
+    <link rel="stylesheet" href="assets/academicons-1.9.3/css/academicons.min.css"/>
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="assets/images/profile.jpg" alt="" /></a>
             </div>
-            <!-- <div class="column0"></div> -->
-            <div class="column0">
-            <a class="twitter-timeline" data-lang="en" data-width="350" data-height="300" data-theme="light" href="https://twitter.com/RomanScripts">Tweets by RomanScripts</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div class="author-content">
+              <h4>Roman Poya</h4>
+              <!-- <span>R&D Engineer</span> -->
             </div>
-  <!--       <div class="column0">
-            <a align="right" class="twitter-timeline" data-lang="en" data-width="300" data-height="150" data-theme="light" href="https://twitter.com/RomanScripts">Tweets by RomanScripts</a> </div> -->
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#section1">About Me</a></li>
+                <li><a href="#section2">Publications</a></li>
+                <li><a href="#section3">Open Source Software</a></li>
+                <!-- <li><a href="#section4">Blog</a></li> -->
+                <!-- <li><a href="#section5">Contact Me</a></li> -->
+              </ul>
+            </nav>
+            <div class="social-network">
+              <ul class="soial-icons">
+                <li>
+                  <a href="https://twitter.com/RomanScripts"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="https://uk.linkedin.com/in/roman-poya-2364a01a"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="https://scholar.google.co.uk/citations?user=W8QHt7oAAAAJ&hl=en"><i class="ai ai-google-scholar"></i></a>
+                </li>
+                <li>
+                  <a href="https://github.com/romeric"><i class="fa fa-github"></i></a>
+                </li>
+                <li>
+                  <a href="https://soundcloud.com/romeric-poyazh"><i class="fa fa-soundcloud"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright-text">
+              <p>Copyright 2018 Roman Poya</p>
+            </div>
+          </div>
         </div>
-        <footer>
-            <ul>
-                <li><a href="https://uk.linkedin.com/pub/roman-poya/1a/4a0/236">
-                <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="140" height="29" border="0" alt="View Roman Poya's profile on LinkedIn"> </a></li>
-                <li><a class="github-button" href="https://github.com/romeric" data-style="mega" data-count-href="/romeric/followers" data-count-api="/users/romeric#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @romeric on GitHub">@romeric</a></li>
-                <li><a class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/u/0/103416496926202712265" data-rel="author"></a></li>
-                <li><iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fromeric-poyazh&color=orange_transparent&size=24" style="width: 24px; height: 24px;"></iframe></li>
-            </ul>
-        </footer>
-    </body>
+      </div>
+
+      <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Hello, I'm Roman!</h2>
+            <div class="line-dec"></div>
+            <span>
+              I research in the area of scientific computing. I develop numerical modelling tools for scientific and engineering problems such as high performance finite element solvers and mesh generators.
+              <p>I spend countless hours listening to tropical house music. I enjoy photography, playing piano, cycling and exploring nature.</p>
+            </span>
+          </div>
+<!--           <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="assets/images/BallBend0.png" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Variational schemes and mixed finite elements for large strain isotropic elasticity in principal stretches: Closed-form tangent eigensystems, convexity conditions, and stabilised elasticity</h4>
+                  <p>
+                    International Journal for Numerical Methods in Engineering
+                  </p>
+                  <div class="white-button">
+                    <a href="#">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="assets/images/repImageGOSS_t1.png" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Geometric Optimisation Via Spectral Shifting</h4>
+                  <p>
+                    ACM Transactions on Graphics, Vol 42, Issue 3 (SIGGRAPH 2023)
+                  </p>
+                  <div class="white-button">
+                    <a href="research.html">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <section class="section my-services" data-section="section2">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Publications</h2>
+            <h4>Journals</h4>
+            <div class="line-dec"></div>
+            <span></span>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service-item">
+                <img src="assets/images/Twist3.png" alt="" />
+                <h4>Variational schemes and mixed finite elements for large strain isotropic elasticity in principal stretches: Closed-form tangent eigensystems, convexity conditions, and stabilised elasticity</h4>
+                <p>Roman Poya, Rogelio Ortigosa, Antonio Gil</p>
+                <p>International Journal for Numerical Methods in Engineering</p>
+                <div class="white-button">
+                  <a href="#">Read More</a>
+                  <a href="assets/docs/2022_MixedFEMElasticityInPrincipalStretches.pdf">PDF</a>
+                  <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.7254">DOI</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <img src="assets/images/repImageGOSS_t1.png" alt="" />
+                <h4>Geometric Optimisation Via Spectral Shifting</h4>
+                <p>Roman Poya, Rogelio Ortigosa, Theodore Kim</p>
+                <p>ACM Transactions on Graphics (SIGGRAPH 2023)</p>
+                <div class="white-button">
+                  <a href="goss.html">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <img src="assets/images/flexo_t.png" alt="" />
+                <h4>On a family of numerical models for couple stress based flexoelectricity for continua and beams</h4>
+                <p>Roman Poya, Antonio Gil, Rogelio Ortigosa, Roberto Palma</p>
+                <p>Journal of the Mechanics and Physics of Solids, Vol 125, pp 613-652, 2019</p>
+                <div class="white-button">
+                  <a href="assets/docs/floxelectric_paper.pdf">PDF</a>
+                  <a href="https://doi.org/10.1016/j.jmps.2019.01.013">DOI</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <img src="assets/images/CylExpansion_130_t.png" alt="" />
+                <h4>A curvilinear high order finite element framework for electromechanics: From linearised electro-elasticity to massively deformable dielectric elastomers</h4>
+                <p>Roman Poya, Antonio Gil, Rogelio Ortigosa, Ruben Sevilla, Javier Bonet, Wolfgang A. Wall</p>
+                <p>Computer Methods in Applied Mechanics and Engineering, Vol 329, No 1, pp 75-117, 2018</p>
+                <div class="white-button">
+                  <a href="assets/docs/Curved_HOFEM.pdf">PDF</a>
+                  <a href="https://doi.org/10.1016/j.cma.2017.09.020">DOI</a>
+                  <a href="https://github.com/romeric/florence">GITHUB</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <img src="assets/images/fastor_img.png" alt="" />
+                <h4>A high performance data parallel tensor contraction framework: Application to coupled electro-mechanics</h4>
+                <p>Roman Poya, Antonio Gil, Rogelio Ortigosa</p>
+                <p>Computer Physics Communications, Vol 216, pp 35-52, 2017</p>
+                <div class="white-button">
+                  <a href="assets/docs/fastor_paper.pdf">PDF</a>
+                  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010465517300681">DOI</a>
+                  <a href="https://github.com/romeric/Fastor">GITHUB</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <img src="assets/images/postmesh_img.png" alt="" />
+                <h4>A unified approach for a posteriori high-order curved mesh generation using solid mechanics</h4>
+                <p>Roman Poya, Ruben Sevilla, Antonio Gil</p>
+                <p>Computational Mechanics, Vol 58, pp 457-490, 2016</p>
+                <div class="white-button">
+                  <a href="assets/docs/postmesh_paper.pdf">PDF</a>
+                  <a href="https://link.springer.com/article/10.1007/s00466-016-1302-2">DOI</a>
+                  <a href="https://github.com/romeric/PostMesh">GITHUB</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <img src="assets/images/pledger_img_t.png" alt="" />
+                <h4>Solution of an industrially relevant coupled magneto–mechanical problem set on an axisymmetric domain</h4>
+                <p>Paul David Ledger, Antonio Gil, Roman Poya, Marcel Kruip, Ian Wilkinson, Scott Bagwell</p>
+                <p>Applied Mathematical Modelling, Vol 40, pp 1959-1971, 2016</p>
+                <div class="white-button">
+                  <a href="assets/docs/pledger_paper.pdf">PDF</a>
+                  <a href="https://doi.org/10.1016/j.apm.2015.09.030">DOI</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <img src="assets/images/piezo_img.png" alt="" />
+                <h4>A computational framework for the analysis of linear piezoelectric beams using hp-FEM</h4>
+                <p>Roman Poya, Antonio Gil, Paul David Ledger</p>
+                <p>Computers & Structures, Vol 152, pp 155-172, 2016</p>
+                <div class="white-button">
+                  <a href="assets/docs/piezo_paper.pdf">PDF</a>
+                  <a href="https://doi.org/10.1016/j.compstruc.2015.01.012">DOI</a>
+                  <a href="https://github.com/romeric/FEAPB">GITHUB</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="section-heading">
+            <h4>Conference Proceedings</h4>
+            <div class="line-dec"></div>
+            <span></span>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service-item">
+                <img src="assets/images/oberwolfach_t.png" alt="" />
+                <h4>A new framework for large strain electro-mechanics based on convex multi-variable strain energies</h4>
+                <p>Antonio Gil, Rogelio Ortigosa, Roman Poya</p>
+                <p>Oberwolfach Institute of Mathematics (MFO) Workshop, Oberwofach Germany, October 21-27, 2018</p>
+                <div class="white-button">
+                  <a href="https://publications.mfo.de/bitstream/handle/mfo/3670/OWR_2018_48.pdf">PDF</a>
+                  <a href="https://www.mfo.de/occasion/1843/www_view">LINK</a>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+<!--             <div class="col-md-6">
+              <div class="service-item">
+                <h4>A new framework for large strain electro-mechanics based on Convex Multi-Variable (CMV) strain energies: Preliminaries on rank-one laminates</h4>
+                <p>Antonio Gil, Rogelio Ortigosa, Roman Poya</p>
+                <p>Society of Engineering Science (SES 2018), Madrid, Spain, 10-12 October, 2018</p>
+                <div class="white-button">
+                </div>
+              </div>
+            </div> -->
+            <!--  -->
+<!--             <div class="col-md-6">
+              <div class="service-item">
+                <h4>A new framework for large strain electro-mechanics based on convex multi-variable strain energies: new relaxation techniques and application to composite materials</h4>
+                <p>Antonio Gil, Rogelio Ortigosa, Roman Poya</p>
+                <p>6th European Conference on Computational Mechanics (ECCM 6), Glasgow UK, June 11-15, 2018</p>
+                <div class="white-button">
+                  <a href="https://congress.cimne.com/eccm_ecfd2018/admin/files/fileabstract/a2029.pdf">PDF</a>
+                </div>
+              </div>
+            </div> -->
+            <!--  -->
+            <div class="col-md-6">
+              <div class="service-item">
+                <img src="assets/images/Disc20_783_t.png" alt="" />
+                <h4>Development of monolithic and staggered schemes for coupled electromechanics with high order curvilinear finite elements</h4>
+                <p>Roman Poya, Antonio Gil, Rogelio Ortigosa</p>
+                <p>European Congress on Computational Methods in Applied Sciences and Engineering (ECCOMAS 2017), Rhodes Island Greece, 12-14 June, 2017</p>
+                <div class="white-button">
+                  <a href="http://congress.cimne.com/coupled2017/admin/files/fileabstract/a352.pdf">PDF</a>
+                  <a href="https://github.com/romeric/florence">GITHUB</a>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-md-6">
+              <div class="service-item">
+                <img src="assets/images/cylinder_t.png" alt="" />
+                <h4>A consistently linearised solid mechanics based mesh deformation technique for high order curved elements</h4>
+                <p>Roman Poya, Ruben Sevilla, Antonio Gil</p>
+                <p>European Congress on Computational Methods in Applied Sciences and Engineering (ECCOMAS 2016), Crete Island Greece, 5-10 June, 2016</p>
+                <div class="white-button">
+                  <a href="https://www.eccomas2016.org/proceedings/pdf/10925.pdf">PDF</a>
+                  <a href="https://github.com/romeric/PostMesh">GITHUB</a>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-md-6">
+              <div class="service-item">
+                <h4>Computational strategies for a new class of coupled models in electromechanics based on linear elasticity and non-linear electro-statics</h4>
+                <p>Roman Poya, Antonio Gil, Javier Bonet</p>
+                <p>IMA Conference on Numerical Methods for Simulation, Oxford UK, 1-4 September, 2015</p>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-md-6">
+              <div class="service-item">
+                <h4>A computational framework for linear elasticity coupled with nonlinear electro-magneto-static</h4>
+                <p>Roman Poya, Antonio Gil, Javier Bonet</p>
+                <p>23rd UKACM (then UK-ACME) Conference on Computational Mechanics, Swansea UK, 6-10 April, 2014</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-heading">
+            <h4>Misc</h4>
+            <div class="line-dec"></div>
+            <span></span>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service-item">
+                <img src="assets/images/phd_cover.png" alt="" />
+                <h4>High order curvilinear finite elements for small and large deformation electromechanics: Integrating CAD, mesh generation and finite element design for multiphysics problems</h4>
+                <p>Roman Poya</p>
+                <p>PhD Thesis, May 2018</p>
+                <div class="white-button">
+                  <a href="assets/docs/PhDThesis_RomanPoya.pdf">PDF</a>
+                  <a href="https://github.com/romeric/florence">GITHUB</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="service-item">
+                <img src="assets/images/poster_2017.png" alt="" />
+                <h4>A high performance high order curvilinear finite element framework for coupled electromechanics</h4>
+                <p>Roman Poya</p>
+                <p>Poster Presentation, 2-4 February 2017, Swansea, UK (Best Poster Award)</p>
+                <div class="white-button">
+                  <a href="assets/docs/poster_2017.pdf">PDF</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <section class="section my-services" data-section="section3">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Open Source Software</h2>
+            <div class="line-dec"></div>
+            <span></span>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service-item">
+                <h4>Florence</h4>
+                <p>A finite element framework for Python's scientific stack</p>
+                <div class="white-button">
+                  <a href="https://github.com/romeric/florence">GITHUB</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="service-item">
+                <h4>Fastor</h4>
+                <p>A lightweight high performance tensor algebra framework for modern C++</p>
+                <div class="white-button">
+                  <a href="https://github.com/romeric/Fastor">GITHUB</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="service-item">
+                <h4>PostMesh</h4>
+                <p>A curvilinear mesh generator for high order finite element analysis</p>
+                <div class="white-button">
+                  <a href="https://github.com/romeric/PostMesh">GITHUB</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="service-item">
+                <h4>FEAPB</h4>
+                <p>An intuitive user interface for hp-finite element analysis of three-dimensional piezoelectric beams</p>
+                <div class="white-button">
+                  <a href="https://github.com/romeric/FEAPB">GITHUB</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- USE THIS FOR BLOG -->
+<!--       <section class="section my-work" data-section="section3">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Over the years</h2>
+            <div class="line-dec"></div>
+            <span>
+              Professional and personal stuff
+            </span>
+          </div>
+          <div class="row">
+            <div class="isotope-wrapper">
+              <form class="isotope-toolbar">
+                <label
+                  ><input
+                    type="radio"
+                    data-type="*"
+                    checked=""
+                    name="isotope-filter"
+                  />
+                  <span>all</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="people"
+                    name="isotope-filter"
+                  />
+                  <span>Conferences & Workshops & Summer Schools</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="nature"
+                    name="isotope-filter"
+                  />
+                  <span>Geometry</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="animals"
+                    name="isotope-filter"
+                  />
+                  <span>Meshing</span></label
+                >
+              </form>
+              <div class="isotope-box">
+                <div class="isotope-item" data-type="nature">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/ACME_GroupPhoto.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/ACME_GroupPhoto.jpg"
+                        data-lightbox="image-1"
+                        data-title="UKACM 2014 Attendees"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>UKACM 2014</h4>
+                      <span>UKACM Conference 2014, Swansea UK</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/udine.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/udine.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Udine Italy, 2019</h4>
+                      <span>Summer school on Fluid-Structure Interactions, Udine Italy, 2019</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="animals">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-03.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-03.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Item Third</h4>
+                      <span>customize anything</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-04.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-04.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Item Fourth</h4>
+                      <span>Re-distribution not allowed</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+<!--       <section class="section contact-me" data-section="section4">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Contact Me</h2>
+            <div class="line-dec"></div>
+            <span
+              >Fusce eget nibh nec justo interdum condimentum. Morbi justo ex,
+              efficitur at ante ac, tincidunt maximus ligula. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit.</span
+            >
+          </div>
+          <div class="row">
+            <div class="right-content">
+              <div class="container">
+                <form id="contact" action="" method="post">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input
+                          name="name"
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Your name..."
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input
+                          name="email"
+                          type="text"
+                          class="form-control"
+                          id="email"
+                          placeholder="Your email..."
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <input
+                          name="subject"
+                          type="text"
+                          class="form-control"
+                          id="subject"
+                          placeholder="Subject..."
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <textarea
+                          name="message"
+                          rows="6"
+                          class="form-control"
+                          id="message"
+                          placeholder="Your message..."
+                          required=""
+                        ></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="button">
+                          Send Message
+                        </button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+  </body>
 </html>
