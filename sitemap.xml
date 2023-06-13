@@ -8,12 +8,17 @@
 
 
 <url>
-  <loc>http://romeric.github.io/</loc>
+  <loc>https://romeric.github.io/</loc>
   <lastmod>2018-12-23T23:14:44+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://romeric.github.io/goss</loc>
+  <loc>https://romeric.github.io/goss</loc>
+  <lastmod>2018-12-23T23:14:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://romeric.github.io/mixedps_elasticity</loc>
   <lastmod>2018-12-23T23:14:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
